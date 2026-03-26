@@ -2,8 +2,9 @@ import Link from "next/link"
 
 export default function Navbar() {
   return (
-    <nav style={{display:"flex", gap:"20px"}}>
+    <nav className="bg-gray-800 text-white p-4 flex gap-4">
       <Link href="/">Home</Link>
+      <Link href="/recipes">Recipes</Link>
       <Link href="/login">Login</Link>
       <Link href="/register">Register</Link>
     </nav>
