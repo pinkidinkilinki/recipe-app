@@ -10,7 +10,7 @@ export default function RecipeDetail() {
   useEffect(() => {
     if (!params?.id) return
 
-    fetch(`http://localhost:3001/recipes/${params.id}`)
+      fetch(`https://recipe-api-v6km.onrender.com/recipes/${params.id}`)
       .then(res => res.json())
       .then(data => setRecipe(data))
   }, [params])

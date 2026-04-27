@@ -16,13 +16,13 @@ export default function RecipesPage() {
   }, [])
 
   useEffect(() => {
-    fetch("http://localhost:3001/recipes")
+      fetch("https://recipe-api-v6km.onrender.com")
       .then(res => res.json())
       .then(data => setRecipes(data))
   }, [])
 
   function deleteRecipe(id: string) {
-    fetch(`http://localhost:3001/recipes/${id}`, {
+      fetch(`https://recipe-api-v6km.onrender.com/recipes/${id}`, {
       method: "DELETE"
     }).then(() => {
       setRecipes(recipes.filter(r => r.id !== id))
@@ -37,7 +37,7 @@ export default function RecipesPage() {
           description
       }
 
-    fetch("http://localhost:3001/recipes", {
+      fetch("https://recipe-api-v6km.onrender.com", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

@@ -11,7 +11,7 @@ export default function Login() {
   async function handleLogin(e: React.FormEvent) {
     e.preventDefault()
 
-    const res = await fetch("http://localhost:3001/users")
+      const res = await fetch("https://recipe-api-v6km.onrender.com")
     const users = await res.json()
 
     const user = users.find(

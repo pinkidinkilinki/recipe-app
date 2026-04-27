@@ -15,7 +15,7 @@ export default function RegisterPage() {
 
     const newUser = { username, password }
 
-    await fetch("http://localhost:3001/users", {
+      await fetch("https://recipe-api-v6km.onrender.com", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
