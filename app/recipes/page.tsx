@@ -16,7 +16,7 @@ export default function RecipesPage() {
   }, [])
 
   useEffect(() => {
-      fetch("https://recipe-api-v6km.onrender.com")
+      fetch("https://recipe-api-v6km.onrender.com/recipes")
       .then(res => res.json())
       .then(data => setRecipes(data))
   }, [])
@@ -37,7 +37,7 @@ export default function RecipesPage() {
           description
       }
 
-      fetch("https://recipe-api-v6km.onrender.com", {
+      fetch("https://recipe-api-v6km.onrender.com/recipes", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
