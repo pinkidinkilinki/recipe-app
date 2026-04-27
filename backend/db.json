@@ -1,0 +1,57 @@
+{
+  "users": [
+    {
+      "username": "ff",
+      "password": "ff",
+      "id": "tHpLDiRkpJo"
+    },
+    {
+      "username": "aa",
+      "password": "aa",
+      "id": "avk_WJPwn1Q"
+    },
+    {
+      "username": "aa",
+      "password": "aa",
+      "id": "ZsMleud7Wk0"
+    },
+    {
+      "username": "bb",
+      "password": "bb",
+      "id": "m58PbKIbFVc"
+    },
+    {
+      "username": "NN",
+      "password": "NN",
+      "id": "ZyK4T1-A6-w"
+    },
+    {
+      "username": "mm",
+      "password": "mm",
+      "id": "g9geIOtoi8Y"
+    }
+  ],
+  "recipes": [
+    {
+      "name": "Potato Cream",
+      "description": "Very nice 2 table spoons of butter",
+      "id": "J4ihrLRVjj8"
+    },
+    {
+      "name": "Banana Bacon",
+      "description": "2 pigs 3 carrots and much of a pumpkin",
+      "id": "D7OiV-gjtFg"
+    },
+    {
+      "name": "Sensible Dinner",
+      "description": "2 - 4 large stakes, salad optional",
+      "id": "1U1TCRy9ETo"
+    },
+    {
+      "name": "Forgetting Things Lately",
+      "description": "Omega 3 fatty Oils - Salmon, Makrell, Scallops ",
+      "id": "VxQOeD9MaFE"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

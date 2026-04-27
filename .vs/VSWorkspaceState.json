@@ -5,8 +5,9 @@
     "\\app\\recipes",
     "\\app\\recipes\\[id]",
     "\\app\\register",
+    "\\backend",
     "\\components"
   ],
-  "SelectedNode": "\\app\\page.tsx",
+  "SelectedNode": "\\backend\\package.json",
   "PreviewInSolutionExplorer": false
 }
