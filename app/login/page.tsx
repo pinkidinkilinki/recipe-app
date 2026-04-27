@@ -1,40 +1,43 @@
-"use client"
-
+"use client" 
+import { User } from "../types"
 import { useState } from "react"
+import { useRouter } from "next/navigation"
 
 export default function Login() {
-
-  const [email, setEmail] = useState("")
+  const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
+  const router = useRouter()
 
-  function handleSubmit(e:any){
+  async function handleLogin(e: React.FormEvent) {
     e.preventDefault()
 
-    console.log(email,password)
+    const res = await fetch("http://localhost:3001/users")
+    const users = await res.json()
+
+    const user = users.find(
+      (u: User) => u.username === username && u.password === password
+    )
+
+      if (user) {
+          localStorage.setItem("user", JSON.stringify(user))
+
+          // Sending a signal so that the Navbar can undate itself
+          window.dispatchEvent(new Event("userChanged"))
+
+          router.push("/recipes")
+      } else {
+          alert("Invalid credentials")
+      }
   }
 
   return (
-    <div>
-
+    <form onSubmit={handleLogin}>
       <h1>Login</h1>
 
-      <form onSubmit={handleSubmit}>
+      <input placeholder="Username" onChange={e => setUsername(e.target.value)} />
+      <input type="password" placeholder="Password" onChange={e => setPassword(e.target.value)} />
 
-        <input
-          placeholder="email"
-          onChange={(e)=>setEmail(e.target.value)}
-        />
-
-        <input
-          type="password"
-          placeholder="password"
-          onChange={(e)=>setPassword(e.target.value)}
-        />
-
-        <button>Login</button>
-
-      </form>
-
-    </div>
+      <button type="submit">Login</button>
+    </form>
   )
 }

@@ -1,26 +1,102 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* ===== RESET ===== */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f5f5;
+    color: #1a1a1a;
+}
+
+/* ===== CENTER APP ===== */
+body {
+    display: flex;
+    justify-content: center;
+}
+
+/* wrapper feel */
+div {
+    max-width: 800px;
+    width: 100%;
+}
+
+/* ===== NAV / HEADINGS ===== */
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* ===== FORM ===== */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    background: #333;
+    color: white;
+    cursor: pointer;
+}
+
+    button:hover {
+        background: #555;
+    }
+
+/* ===== RECIPE CARD ===== */
+.recipeCard {
+    display: block;
+    padding: 15px;
+    border-radius: 10px;
+    background: white;
+    margin-bottom: 12px;
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid #e0e0e0;
+}
+
+    .recipeCard:hover {
+        background: #f0f0f0;
+    }
+
+/* TITLE */
+.recipeName {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+/* DESCRIPTION */
+.recipeDesc {
+    color: #666;
+}
+
+/* DELETE BUTTON */
+.deleteBtn {
+    margin-top: 8px;
+    background: #d9534f;
+}
+
+    .deleteBtn:hover {
+        background: #c9302c;
+    }
+
+/* LIST CLEANUP */
+li {
+    list-style: none;
+    margin-bottom: 15px;
 }
